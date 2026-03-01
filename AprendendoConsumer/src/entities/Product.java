@@ -30,8 +30,8 @@ public class Product {
 		this.price = price;
 	}
 	
-	public static void staticConsumerMethod(Product p) {
-		p.setPrice(p.getPrice() * 1.1);
+	public void staticConsumerMethod() {
+		setPrice(getPrice()* 1.1);
 	}
 	
 	@Override
