@@ -6,11 +6,9 @@ import java.util.Locale;
 
 import entities.Product;
 import util.MyComparator;
-import util.ProductConsumer;
 
 public class Program {
 	public static void main(String[] args) {
-		Product p  = new Product();
 		Locale.setDefault(Locale.US);
 		List<Product> list = new ArrayList<>();
 
@@ -20,7 +18,7 @@ public class Program {
 		list.add(new Product("Micro-ondas", 800.0));
 
 		list.sort(new MyComparator());
-		list.forEach(new ProductConsumer());
+		list.forEach(Product:: staticConsumerMethod);
 		list.forEach(System.out::println);
 	}
 }
